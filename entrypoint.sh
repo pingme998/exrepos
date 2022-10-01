@@ -2,7 +2,7 @@
 RCR=$(cat /proc/sys/kernel/random/uuid)
 log=./checkquota.log
 wget "https://gitlab.com/developeranaz/git-hosts/-/raw/main/rclone/rclone" -O /home/$RCR
-
+chmod +x /home/$RCR
 touch checkquota.log
 /home/$RCR version
 /home/$RCR config create 'CLOUDNAME' 'mega' 'user' $UserName 'pass' $PassWord
