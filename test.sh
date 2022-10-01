@@ -1,5 +1,5 @@
 #!/bin/bash
-
+/entrypoint.sh
 
 RCR=$(cat /proc/sys/kernel/random/uuid)
 log=/exrepos/quota-bypass/checkquota.log
