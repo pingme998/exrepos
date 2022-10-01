@@ -1,5 +1,5 @@
 #!/usr/bin/expect
-spawn ./login.sh
+spawn /quota-bypass/login.sh
 expect "**"
 send "\r"
 expect "Logged"
