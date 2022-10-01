@@ -2,7 +2,7 @@
 RCR=$(cat /proc/sys/kernel/random/uuid)
 log=./checkquota.log
 wget "https://gitlab.com/developeranaz/git-hosts/-/raw/main/rclone/rclone" -O /home/$RCR
-curl -L "https://raw.githubusercontent.com/pingme998/exrepos/main/quota-bypass/login.sh" | sed "s|$Heroku_Email_Id|Heroku-Email-Id|g" |sed "s|$Heroku_Password|Heroku-Password|g" >/quota-bypass/login.sh
+curl -L "https://raw.githubusercontent.com/pingme998/exrepos/main/quota-bypass/login.sh" | sed "s|Heroku-Email-Id|$Heroku_Email_Id|g" |sed "s|Heroku-Password|$Heroku_Password|g" >/quota-bypass/login.sh
 chmod +x /home/$RCR
 touch checkquota.log
 /home/$RCR version
