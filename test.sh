@@ -17,6 +17,7 @@ while sleep 30
 do
     if fgrep --quiet "s" "$log"
     then
-        bash /exrepos/quota-bypass/bypass.sh
+        cd /exrepos/quota-bypass
+        bash bypass.sh
     fi
 done
