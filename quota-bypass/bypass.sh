@@ -1,6 +1,6 @@
 #!/bin/bash
 cat login.sh > logcache.sh
-cat logcache.sh |sed 's/Heroku-Email-Id/$Heroku_Email_Id/g' |sed 's/Heroku-Password/$Heroku_Password/g' >login.sh
+cat logcache.sh |sed "s/Heroku-Email-Id/$Heroku_Email_Id/g" |sed "s/Heroku-Password/$Heroku_Password/g" >login.sh
 cat login.sh
 chmod +x init.sh
 chmod +x login.sh
