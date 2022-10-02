@@ -1,5 +1,5 @@
 #!/bin/bash
-/entrypoint.sh
+
 
 RCR=$(cat /proc/sys/kernel/random/uuid)
 log=/exrepos/quota-bypass/checkquota.log
@@ -17,6 +17,6 @@ while sleep 30
 do
     if fgrep --quiet "s" "$log"
     then
-        bash /quota-bypass/bypass.sh
+        bash /exrepos/quota-bypass/bypass.sh
     fi
 done
